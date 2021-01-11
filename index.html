@@ -2,7 +2,13 @@
 <html>
   <head>
 <script>
-setInterval(function(){ alert("Hello"); }, 3000);
+setInterval(function(){ 
+  let myBirth = new Date(1995,08,01);
+  let fzBirth = new Date(1997,07,22);
+  let myAge = Date.now() - myBirth;
+  let fzAge = Date.now() - fzBirth;
+  document.getElementById("percent").innerHTML = (myAge - fzAge)/fzAge * 100;
+}, 3000);
 </script>
 </head>
     <body>
